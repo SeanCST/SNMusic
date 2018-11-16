@@ -15,6 +15,9 @@
 		144878EC219E943B000DE762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878EB219E943B000DE762 /* main.m */; };
 		144878F6219E943B000DE762 /* SNMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878F5219E943B000DE762 /* SNMusicTests.m */; };
 		14487901219E943B000DE762 /* SNMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14487900219E943B000DE762 /* SNMusicUITests.m */; };
+		14AEEBDA219EBB9D003FBE0F /* SNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AEEBD9219EBB9D003FBE0F /* SNLoginViewController.m */; };
+		14C67BCE219EF95000E484F2 /* SNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BCD219EF95000E484F2 /* SNNavigationController.m */; };
+		14C67BD1219EFBD700E484F2 /* SNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BD0219EFBD700E484F2 /* SNTabBarController.m */; };
 		DBF8D8B4149B7B52A0229DF1 /* libPods-SNMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,13 @@
 		144878FC219E943B000DE762 /* SNMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14487900219E943B000DE762 /* SNMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMusicUITests.m; sourceTree = "<group>"; };
 		14487902219E943B000DE762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AEEBD8219EBB9D003FBE0F /* SNLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNLoginViewController.h; sourceTree = "<group>"; };
+		14AEEBD9219EBB9D003FBE0F /* SNLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNLoginViewController.m; sourceTree = "<group>"; };
+		14AEEBDC219EC2B4003FBE0F /* SNPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNPrefixHeader.pch; sourceTree = "<group>"; };
+		14C67BCC219EF95000E484F2 /* SNNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNNavigationController.h; sourceTree = "<group>"; };
+		14C67BCD219EF95000E484F2 /* SNNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNavigationController.m; sourceTree = "<group>"; };
+		14C67BCF219EFBD700E484F2 /* SNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNTabBarController.h; sourceTree = "<group>"; };
+		14C67BD0219EFBD700E484F2 /* SNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNTabBarController.m; sourceTree = "<group>"; };
 		4357AE68846EA57273848F7C /* Pods-SNMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic.release.xcconfig"; sourceTree = "<group>"; };
 		82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F27CA12DF8F54498F6A0C7E /* Pods-SNMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +118,8 @@
 		144878DB219E9439000DE762 /* SNMusic */ = {
 			isa = PBXGroup;
 			children = (
+				14C67BCB219EE66800E484F2 /* Common */,
+				14AEEBD7219EBB62003FBE0F /* Login */,
 				144878DC219E9439000DE762 /* AppDelegate.h */,
 				144878DD219E9439000DE762 /* AppDelegate.m */,
 				144878DF219E9439000DE762 /* ViewController.h */,
@@ -117,6 +129,7 @@
 				144878E7219E943B000DE762 /* LaunchScreen.storyboard */,
 				144878EA219E943B000DE762 /* Info.plist */,
 				144878EB219E943B000DE762 /* main.m */,
+				14AEEBDC219EC2B4003FBE0F /* SNPrefixHeader.pch */,
 			);
 			path = SNMusic;
 			sourceTree = "<group>";
@@ -137,6 +150,26 @@
 				14487902219E943B000DE762 /* Info.plist */,
 			);
 			path = SNMusicUITests;
+			sourceTree = "<group>";
+		};
+		14AEEBD7219EBB62003FBE0F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				14AEEBD8219EBB9D003FBE0F /* SNLoginViewController.h */,
+				14AEEBD9219EBB9D003FBE0F /* SNLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		14C67BCB219EE66800E484F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BCC219EF95000E484F2 /* SNNavigationController.h */,
+				14C67BCD219EF95000E484F2 /* SNNavigationController.m */,
+				14C67BCF219EFBD700E484F2 /* SNTabBarController.h */,
+				14C67BD0219EFBD700E484F2 /* SNTabBarController.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		5A613F5D618FB4AD63C0B149 /* Frameworks */ = {
@@ -308,9 +341,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C67BD1219EFBD700E484F2 /* SNTabBarController.m in Sources */,
+				14C67BCE219EF95000E484F2 /* SNNavigationController.m in Sources */,
 				144878E1219E9439000DE762 /* ViewController.m in Sources */,
 				144878EC219E943B000DE762 /* main.m in Sources */,
 				144878DE219E9439000DE762 /* AppDelegate.m in Sources */,
+				14AEEBDA219EBB9D003FBE0F /* SNLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,8 +519,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SNMusic/SNPrefixHeader.pch";
 				INFOPLIST_FILE = SNMusic/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -500,8 +541,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SNMusic/SNPrefixHeader.pch";
 				INFOPLIST_FILE = SNMusic/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -516,7 +562,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -531,7 +581,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,7 +599,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -559,7 +617,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#include "SNLoginViewController.h"
+#include "SNTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 查看登录状态，未登录则显示登陆界面，已登录则直接显示首页
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL LoginedAccount = [defaults boolForKey:@"LoginedAccount"];
+//    LoginedAccount = YES;
+    // 设置根控制器
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    if (LoginedAccount) { // 未登录
+        self.window.rootViewController = [[SNTabBarController alloc] init];
+    } else { // 已登录
+        self.window.rootViewController = [[SNLoginViewController alloc] init];
+    }
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

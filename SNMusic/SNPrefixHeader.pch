@@ -1,0 +1,29 @@
+//
+//  SNPrefixHeader.pch
+//  SNMusic
+//
+//  Created by 肖恩伟 on 2018/11/16.
+//  Copyright © 2018 肖恩伟. All rights reserved.
+//
+
+#ifndef SNPrefixHeader
+#define SNPrefixHeader
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// URL
+#define BaseUrl @"http://127.0.0.1:3000"
+
+#import "Masonry.h"
+#import "AFNetworking.h"
+
+// 颜色
+#define SNRGBColor(r, g, b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
+#define SNBackgroundColor SNRGBColor(39, 108, 208)
+#define SNButtonClickedColor SNRGBColor(85, 154, 247)
+#define SNSeperateLineColor SNRGBColor(239, 237, 241)
+#define SNTabBarTitleColor SNRGBColor(44, 44, 44)
+#define SNTabBarTitleSelectedColor SNRGBColor(18, 150, 219)
+
+#endif /* PrefixHeader_pch */
