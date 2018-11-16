@@ -15,6 +15,7 @@
 		144878EC219E943B000DE762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878EB219E943B000DE762 /* main.m */; };
 		144878F6219E943B000DE762 /* SNMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878F5219E943B000DE762 /* SNMusicTests.m */; };
 		14487901219E943B000DE762 /* SNMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14487900219E943B000DE762 /* SNMusicUITests.m */; };
+		DBF8D8B4149B7B52A0229DF1 /* libPods-SNMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		144878FC219E943B000DE762 /* SNMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14487900219E943B000DE762 /* SNMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMusicUITests.m; sourceTree = "<group>"; };
 		14487902219E943B000DE762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4357AE68846EA57273848F7C /* Pods-SNMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic.release.xcconfig"; sourceTree = "<group>"; };
+		82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F27CA12DF8F54498F6A0C7E /* Pods-SNMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF8D8B4149B7B52A0229DF1 /* libPods-SNMusic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				144878F4219E943B000DE762 /* SNMusicTests */,
 				144878FF219E943B000DE762 /* SNMusicUITests */,
 				144878DA219E9439000DE762 /* Products */,
+				FABC843623CFBAD88D154910 /* Pods */,
+				5A613F5D618FB4AD63C0B149 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = SNMusicUITests;
 			sourceTree = "<group>";
 		};
+		5A613F5D618FB4AD63C0B149 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FABC843623CFBAD88D154910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F27CA12DF8F54498F6A0C7E /* Pods-SNMusic.debug.xcconfig */,
+				4357AE68846EA57273848F7C /* Pods-SNMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14487905219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusic" */;
 			buildPhases = (
+				E97F40CD9A0D1E2517889267 /* [CP] Check Pods Manifest.lock */,
 				144878D5219E9439000DE762 /* Sources */,
 				144878D6219E9439000DE762 /* Frameworks */,
 				144878D7219E9439000DE762 /* Resources */,
@@ -256,6 +281,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E97F40CD9A0D1E2517889267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		144878D5219E9439000DE762 /* Sources */ = {
@@ -431,34 +477,34 @@
 		};
 		14487906219E943B000DE762 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F27CA12DF8F54498F6A0C7E /* Pods-SNMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LH98M8655L;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SNMusic/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		14487907219E943B000DE762 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4357AE68846EA57273848F7C /* Pods-SNMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LH98M8655L;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SNMusic/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -470,11 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,11 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,11 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,11 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH98M8655L;
 				INFOPLIST_FILE = SNMusicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
