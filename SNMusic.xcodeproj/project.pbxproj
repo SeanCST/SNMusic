@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		144878DE219E9439000DE762 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878DD219E9439000DE762 /* AppDelegate.m */; };
+		144878E1219E9439000DE762 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878E0219E9439000DE762 /* ViewController.m */; };
+		144878E4219E9439000DE762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144878E2219E9439000DE762 /* Main.storyboard */; };
+		144878E6219E943B000DE762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144878E5219E943B000DE762 /* Assets.xcassets */; };
+		144878E9219E943B000DE762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144878E7219E943B000DE762 /* LaunchScreen.storyboard */; };
+		144878EC219E943B000DE762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878EB219E943B000DE762 /* main.m */; };
+		144878F6219E943B000DE762 /* SNMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878F5219E943B000DE762 /* SNMusicTests.m */; };
+		14487901219E943B000DE762 /* SNMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14487900219E943B000DE762 /* SNMusicUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		144878F2219E943B000DE762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 144878D1219E9439000DE762 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 144878D8219E9439000DE762;
+			remoteInfo = SNMusic;
+		};
+		144878FD219E943B000DE762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 144878D1219E9439000DE762 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 144878D8219E9439000DE762;
+			remoteInfo = SNMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		144878D9219E9439000DE762 /* SNMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		144878DC219E9439000DE762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		144878DD219E9439000DE762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		144878DF219E9439000DE762 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		144878E0219E9439000DE762 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		144878E3219E9439000DE762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		144878E5219E943B000DE762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		144878E8219E943B000DE762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		144878EA219E943B000DE762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		144878EB219E943B000DE762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		144878F1219E943B000DE762 /* SNMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		144878F5219E943B000DE762 /* SNMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMusicTests.m; sourceTree = "<group>"; };
+		144878F7219E943B000DE762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		144878FC219E943B000DE762 /* SNMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14487900219E943B000DE762 /* SNMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMusicUITests.m; sourceTree = "<group>"; };
+		14487902219E943B000DE762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		144878D6219E9439000DE762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		144878EE219E943B000DE762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		144878F9219E943B000DE762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		144878D0219E9439000DE762 = {
+			isa = PBXGroup;
+			children = (
+				144878DB219E9439000DE762 /* SNMusic */,
+				144878F4219E943B000DE762 /* SNMusicTests */,
+				144878FF219E943B000DE762 /* SNMusicUITests */,
+				144878DA219E9439000DE762 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		144878DA219E9439000DE762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				144878D9219E9439000DE762 /* SNMusic.app */,
+				144878F1219E943B000DE762 /* SNMusicTests.xctest */,
+				144878FC219E943B000DE762 /* SNMusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		144878DB219E9439000DE762 /* SNMusic */ = {
+			isa = PBXGroup;
+			children = (
+				144878DC219E9439000DE762 /* AppDelegate.h */,
+				144878DD219E9439000DE762 /* AppDelegate.m */,
+				144878DF219E9439000DE762 /* ViewController.h */,
+				144878E0219E9439000DE762 /* ViewController.m */,
+				144878E2219E9439000DE762 /* Main.storyboard */,
+				144878E5219E943B000DE762 /* Assets.xcassets */,
+				144878E7219E943B000DE762 /* LaunchScreen.storyboard */,
+				144878EA219E943B000DE762 /* Info.plist */,
+				144878EB219E943B000DE762 /* main.m */,
+			);
+			path = SNMusic;
+			sourceTree = "<group>";
+		};
+		144878F4219E943B000DE762 /* SNMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				144878F5219E943B000DE762 /* SNMusicTests.m */,
+				144878F7219E943B000DE762 /* Info.plist */,
+			);
+			path = SNMusicTests;
+			sourceTree = "<group>";
+		};
+		144878FF219E943B000DE762 /* SNMusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14487900219E943B000DE762 /* SNMusicUITests.m */,
+				14487902219E943B000DE762 /* Info.plist */,
+			);
+			path = SNMusicUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		144878D8219E9439000DE762 /* SNMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14487905219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusic" */;
+			buildPhases = (
+				144878D5219E9439000DE762 /* Sources */,
+				144878D6219E9439000DE762 /* Frameworks */,
+				144878D7219E9439000DE762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SNMusic;
+			productName = SNMusic;
+			productReference = 144878D9219E9439000DE762 /* SNMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		144878F0219E943B000DE762 /* SNMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14487908219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusicTests" */;
+			buildPhases = (
+				144878ED219E943B000DE762 /* Sources */,
+				144878EE219E943B000DE762 /* Frameworks */,
+				144878EF219E943B000DE762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				144878F3219E943B000DE762 /* PBXTargetDependency */,
+			);
+			name = SNMusicTests;
+			productName = SNMusicTests;
+			productReference = 144878F1219E943B000DE762 /* SNMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		144878FB219E943B000DE762 /* SNMusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1448790B219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusicUITests" */;
+			buildPhases = (
+				144878F8219E943B000DE762 /* Sources */,
+				144878F9219E943B000DE762 /* Frameworks */,
+				144878FA219E943B000DE762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				144878FE219E943B000DE762 /* PBXTargetDependency */,
+			);
+			name = SNMusicUITests;
+			productName = SNMusicUITests;
+			productReference = 144878FC219E943B000DE762 /* SNMusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		144878D1219E9439000DE762 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "肖恩伟";
+				TargetAttributes = {
+					144878D8219E9439000DE762 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					144878F0219E943B000DE762 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 144878D8219E9439000DE762;
+					};
+					144878FB219E943B000DE762 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 144878D8219E9439000DE762;
+					};
+				};
+			};
+			buildConfigurationList = 144878D4219E9439000DE762 /* Build configuration list for PBXProject "SNMusic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 144878D0219E9439000DE762;
+			productRefGroup = 144878DA219E9439000DE762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				144878D8219E9439000DE762 /* SNMusic */,
+				144878F0219E943B000DE762 /* SNMusicTests */,
+				144878FB219E943B000DE762 /* SNMusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		144878D7219E9439000DE762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144878E9219E943B000DE762 /* LaunchScreen.storyboard in Resources */,
+				144878E6219E943B000DE762 /* Assets.xcassets in Resources */,
+				144878E4219E9439000DE762 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		144878EF219E943B000DE762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		144878FA219E943B000DE762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		144878D5219E9439000DE762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144878E1219E9439000DE762 /* ViewController.m in Sources */,
+				144878EC219E943B000DE762 /* main.m in Sources */,
+				144878DE219E9439000DE762 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		144878ED219E943B000DE762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144878F6219E943B000DE762 /* SNMusicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		144878F8219E943B000DE762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14487901219E943B000DE762 /* SNMusicUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		144878F3219E943B000DE762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 144878D8219E9439000DE762 /* SNMusic */;
+			targetProxy = 144878F2219E943B000DE762 /* PBXContainerItemProxy */;
+		};
+		144878FE219E943B000DE762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 144878D8219E9439000DE762 /* SNMusic */;
+			targetProxy = 144878FD219E943B000DE762 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		144878E2219E9439000DE762 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				144878E3219E9439000DE762 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		144878E7219E943B000DE762 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				144878E8219E943B000DE762 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14487903219E943B000DE762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		14487904219E943B000DE762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14487906219E943B000DE762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LH98M8655L;
+				INFOPLIST_FILE = SNMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14487907219E943B000DE762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LH98M8655L;
+				INFOPLIST_FILE = SNMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14487909219E943B000DE762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LH98M8655L;
+				INFOPLIST_FILE = SNMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNMusic.app/SNMusic";
+			};
+			name = Debug;
+		};
+		1448790A219E943B000DE762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LH98M8655L;
+				INFOPLIST_FILE = SNMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNMusic.app/SNMusic";
+			};
+			name = Release;
+		};
+		1448790C219E943B000DE762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LH98M8655L;
+				INFOPLIST_FILE = SNMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNMusic;
+			};
+			name = Debug;
+		};
+		1448790D219E943B000DE762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LH98M8655L;
+				INFOPLIST_FILE = SNMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNMusic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		144878D4219E9439000DE762 /* Build configuration list for PBXProject "SNMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14487903219E943B000DE762 /* Debug */,
+				14487904219E943B000DE762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14487905219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14487906219E943B000DE762 /* Debug */,
+				14487907219E943B000DE762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14487908219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14487909219E943B000DE762 /* Debug */,
+				1448790A219E943B000DE762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1448790B219E943B000DE762 /* Build configuration list for PBXNativeTarget "SNMusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1448790C219E943B000DE762 /* Debug */,
+				1448790D219E943B000DE762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 144878D1219E9439000DE762 /* Project object */;
+}
