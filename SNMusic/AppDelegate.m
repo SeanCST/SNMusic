@@ -23,7 +23,7 @@
     // 查看登录状态，未登录则显示登陆界面，已登录则直接显示首页
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL LoginedAccount = [defaults boolForKey:@"LoginedAccount"];
-//    LoginedAccount = YES;
+    LoginedAccount = YES;
     // 设置根控制器
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     if (LoginedAccount) { // 未登录

@@ -18,6 +18,13 @@
 		14AEEBDA219EBB9D003FBE0F /* SNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AEEBD9219EBB9D003FBE0F /* SNLoginViewController.m */; };
 		14C67BCE219EF95000E484F2 /* SNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BCD219EF95000E484F2 /* SNNavigationController.m */; };
 		14C67BD1219EFBD700E484F2 /* SNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BD0219EFBD700E484F2 /* SNTabBarController.m */; };
+		14C67BDB219FE57800E484F2 /* SNHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BDA219FE57800E484F2 /* SNHomeViewController.m */; };
+		14C67BDE219FF2B300E484F2 /* SNSongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BDD219FF2B300E484F2 /* SNSongInfo.m */; };
+		14C67BE2219FFE9900E484F2 /* SNSearchSongVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BE1219FFE9900E484F2 /* SNSearchSongVM.m */; };
+		14C67BE821A0079C00E484F2 /* SNSongListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BE721A0079C00E484F2 /* SNSongListView.m */; };
+		14C67BEC21A00AF600E484F2 /* UIView+SNExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BEA21A00AF600E484F2 /* UIView+SNExtension.m */; };
+		14C67BEF21A00EAF00E484F2 /* SNSongListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BEE21A00EAF00E484F2 /* SNSongListViewCell.m */; };
+		14C67BF221A0345800E484F2 /* SNHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BF121A0345800E484F2 /* SNHomeView.m */; };
 		DBF8D8B4149B7B52A0229DF1 /* libPods-SNMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +69,20 @@
 		14C67BCD219EF95000E484F2 /* SNNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNavigationController.m; sourceTree = "<group>"; };
 		14C67BCF219EFBD700E484F2 /* SNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNTabBarController.h; sourceTree = "<group>"; };
 		14C67BD0219EFBD700E484F2 /* SNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNTabBarController.m; sourceTree = "<group>"; };
+		14C67BD9219FE57800E484F2 /* SNHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNHomeViewController.h; sourceTree = "<group>"; };
+		14C67BDA219FE57800E484F2 /* SNHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNHomeViewController.m; sourceTree = "<group>"; };
+		14C67BDC219FF2B300E484F2 /* SNSongInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSongInfo.h; sourceTree = "<group>"; };
+		14C67BDD219FF2B300E484F2 /* SNSongInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSongInfo.m; sourceTree = "<group>"; };
+		14C67BE0219FFE9900E484F2 /* SNSearchSongVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSearchSongVM.h; sourceTree = "<group>"; };
+		14C67BE1219FFE9900E484F2 /* SNSearchSongVM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSearchSongVM.m; sourceTree = "<group>"; };
+		14C67BE621A0079C00E484F2 /* SNSongListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSongListView.h; sourceTree = "<group>"; };
+		14C67BE721A0079C00E484F2 /* SNSongListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSongListView.m; sourceTree = "<group>"; };
+		14C67BEA21A00AF600E484F2 /* UIView+SNExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SNExtension.m"; sourceTree = "<group>"; };
+		14C67BEB21A00AF600E484F2 /* UIView+SNExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SNExtension.h"; sourceTree = "<group>"; };
+		14C67BED21A00EAF00E484F2 /* SNSongListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSongListViewCell.h; sourceTree = "<group>"; };
+		14C67BEE21A00EAF00E484F2 /* SNSongListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSongListViewCell.m; sourceTree = "<group>"; };
+		14C67BF021A0345800E484F2 /* SNHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNHomeView.h; sourceTree = "<group>"; };
+		14C67BF121A0345800E484F2 /* SNHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNHomeView.m; sourceTree = "<group>"; };
 		4357AE68846EA57273848F7C /* Pods-SNMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic.release.xcconfig"; sourceTree = "<group>"; };
 		82EE3127BEE72E355AE0C2D5 /* libPods-SNMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F27CA12DF8F54498F6A0C7E /* Pods-SNMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +139,7 @@
 		144878DB219E9439000DE762 /* SNMusic */ = {
 			isa = PBXGroup;
 			children = (
+				14C67BD2219FE39B00E484F2 /* Home */,
 				14C67BCB219EE66800E484F2 /* Common */,
 				14AEEBD7219EBB62003FBE0F /* Login */,
 				144878DC219E9439000DE762 /* AppDelegate.h */,
@@ -164,12 +186,73 @@
 		14C67BCB219EE66800E484F2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				14C67BE921A00ACE00E484F2 /* Extension */,
 				14C67BCC219EF95000E484F2 /* SNNavigationController.h */,
 				14C67BCD219EF95000E484F2 /* SNNavigationController.m */,
 				14C67BCF219EFBD700E484F2 /* SNTabBarController.h */,
 				14C67BD0219EFBD700E484F2 /* SNTabBarController.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		14C67BD2219FE39B00E484F2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BD5219FE49600E484F2 /* Controller */,
+				14C67BD4219FE48F00E484F2 /* View */,
+				14C67BDF219FFE2700E484F2 /* ViewModel */,
+				14C67BD3219FE48800E484F2 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		14C67BD3219FE48800E484F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BDC219FF2B300E484F2 /* SNSongInfo.h */,
+				14C67BDD219FF2B300E484F2 /* SNSongInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14C67BD4219FE48F00E484F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BF021A0345800E484F2 /* SNHomeView.h */,
+				14C67BF121A0345800E484F2 /* SNHomeView.m */,
+				14C67BE621A0079C00E484F2 /* SNSongListView.h */,
+				14C67BE721A0079C00E484F2 /* SNSongListView.m */,
+				14C67BED21A00EAF00E484F2 /* SNSongListViewCell.h */,
+				14C67BEE21A00EAF00E484F2 /* SNSongListViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14C67BD5219FE49600E484F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BD9219FE57800E484F2 /* SNHomeViewController.h */,
+				14C67BDA219FE57800E484F2 /* SNHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14C67BDF219FFE2700E484F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BE0219FFE9900E484F2 /* SNSearchSongVM.h */,
+				14C67BE1219FFE9900E484F2 /* SNSearchSongVM.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14C67BE921A00ACE00E484F2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14C67BEB21A00AF600E484F2 /* UIView+SNExtension.h */,
+				14C67BEA21A00AF600E484F2 /* UIView+SNExtension.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		5A613F5D618FB4AD63C0B149 /* Frameworks */ = {
@@ -200,6 +283,7 @@
 				144878D5219E9439000DE762 /* Sources */,
 				144878D6219E9439000DE762 /* Frameworks */,
 				144878D7219E9439000DE762 /* Resources */,
+				2EBF3E5268576F45A515771F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,6 +400,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2EBF3E5268576F45A515771F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNMusic/Pods-SNMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E97F40CD9A0D1E2517889267 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,11 +443,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C67BDB219FE57800E484F2 /* SNHomeViewController.m in Sources */,
 				14C67BD1219EFBD700E484F2 /* SNTabBarController.m in Sources */,
 				14C67BCE219EF95000E484F2 /* SNNavigationController.m in Sources */,
+				14C67BDE219FF2B300E484F2 /* SNSongInfo.m in Sources */,
+				14C67BE821A0079C00E484F2 /* SNSongListView.m in Sources */,
+				14C67BF221A0345800E484F2 /* SNHomeView.m in Sources */,
 				144878E1219E9439000DE762 /* ViewController.m in Sources */,
 				144878EC219E943B000DE762 /* main.m in Sources */,
+				14C67BEC21A00AF600E484F2 /* UIView+SNExtension.m in Sources */,
+				14C67BE2219FFE9900E484F2 /* SNSearchSongVM.m in Sources */,
 				144878DE219E9439000DE762 /* AppDelegate.m in Sources */,
+				14C67BEF21A00EAF00E484F2 /* SNSongListViewCell.m in Sources */,
 				14AEEBDA219EBB9D003FBE0F /* SNLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
