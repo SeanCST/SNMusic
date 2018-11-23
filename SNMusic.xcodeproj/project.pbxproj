@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141AB0A121A7F48B004F6464 /* SNPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0A021A7F48B004F6464 /* SNPlayingViewController.m */; };
+		141AB0A521A7F687004F6464 /* UIView+SNGetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0A421A7F687004F6464 /* UIView+SNGetController.m */; };
+		141AB0AB21A82C62004F6464 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0AA21A82C62004F6464 /* Track.m */; };
+		141AB0AE21A82DA3004F6464 /* Track+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0AD21A82DA3004F6464 /* Track+Provider.m */; };
 		144878DE219E9439000DE762 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878DD219E9439000DE762 /* AppDelegate.m */; };
 		144878E1219E9439000DE762 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878E0219E9439000DE762 /* ViewController.m */; };
 		144878E4219E9439000DE762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144878E2219E9439000DE762 /* Main.storyboard */; };
@@ -46,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141AB09F21A7F48B004F6464 /* SNPlayingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNPlayingViewController.h; sourceTree = "<group>"; };
+		141AB0A021A7F48B004F6464 /* SNPlayingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNPlayingViewController.m; sourceTree = "<group>"; };
+		141AB0A321A7F687004F6464 /* UIView+SNGetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SNGetController.h"; sourceTree = "<group>"; };
+		141AB0A421A7F687004F6464 /* UIView+SNGetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SNGetController.m"; sourceTree = "<group>"; };
+		141AB0A921A82C62004F6464 /* Track.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		141AB0AA21A82C62004F6464 /* Track.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		141AB0AC21A82DA3004F6464 /* Track+Provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Track+Provider.h"; sourceTree = "<group>"; };
+		141AB0AD21A82DA3004F6464 /* Track+Provider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Track+Provider.m"; sourceTree = "<group>"; };
 		144878D9219E9439000DE762 /* SNMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144878DC219E9439000DE762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		144878DD219E9439000DE762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +126,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		141AB09E21A7F460004F6464 /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				141AB0A821A82C30004F6464 /* Model */,
+				141AB0A721A82C25004F6464 /* View */,
+				141AB0A621A82C17004F6464 /* Controller */,
+			);
+			path = Playing;
+			sourceTree = "<group>";
+		};
+		141AB0A221A7F636004F6464 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				141AB0A321A7F687004F6464 /* UIView+SNGetController.h */,
+				141AB0A421A7F687004F6464 /* UIView+SNGetController.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		141AB0A621A82C17004F6464 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				141AB09F21A7F48B004F6464 /* SNPlayingViewController.h */,
+				141AB0A021A7F48B004F6464 /* SNPlayingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		141AB0A721A82C25004F6464 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		141AB0A821A82C30004F6464 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				141AB0A921A82C62004F6464 /* Track.h */,
+				141AB0AA21A82C62004F6464 /* Track.m */,
+				141AB0AC21A82DA3004F6464 /* Track+Provider.h */,
+				141AB0AD21A82DA3004F6464 /* Track+Provider.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		144878D0219E9439000DE762 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +197,7 @@
 		144878DB219E9439000DE762 /* SNMusic */ = {
 			isa = PBXGroup;
 			children = (
+				141AB09E21A7F460004F6464 /* Playing */,
 				14C67BD2219FE39B00E484F2 /* Home */,
 				14C67BCB219EE66800E484F2 /* Common */,
 				14AEEBD7219EBB62003FBE0F /* Login */,
@@ -186,6 +245,7 @@
 		14C67BCB219EE66800E484F2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				141AB0A221A7F636004F6464 /* Category */,
 				14C67BE921A00ACE00E484F2 /* Extension */,
 				14C67BCC219EF95000E484F2 /* SNNavigationController.h */,
 				14C67BCD219EF95000E484F2 /* SNNavigationController.m */,
@@ -446,15 +506,19 @@
 				14C67BDB219FE57800E484F2 /* SNHomeViewController.m in Sources */,
 				14C67BD1219EFBD700E484F2 /* SNTabBarController.m in Sources */,
 				14C67BCE219EF95000E484F2 /* SNNavigationController.m in Sources */,
+				141AB0AE21A82DA3004F6464 /* Track+Provider.m in Sources */,
+				141AB0A521A7F687004F6464 /* UIView+SNGetController.m in Sources */,
 				14C67BDE219FF2B300E484F2 /* SNSongInfo.m in Sources */,
 				14C67BE821A0079C00E484F2 /* SNSongListView.m in Sources */,
 				14C67BF221A0345800E484F2 /* SNHomeView.m in Sources */,
+				141AB0AB21A82C62004F6464 /* Track.m in Sources */,
 				144878E1219E9439000DE762 /* ViewController.m in Sources */,
 				144878EC219E943B000DE762 /* main.m in Sources */,
 				14C67BEC21A00AF600E484F2 /* UIView+SNExtension.m in Sources */,
 				14C67BE2219FFE9900E484F2 /* SNSearchSongVM.m in Sources */,
 				144878DE219E9439000DE762 /* AppDelegate.m in Sources */,
 				14C67BEF21A00EAF00E484F2 /* SNSongListViewCell.m in Sources */,
+				141AB0A121A7F48B004F6464 /* SNPlayingViewController.m in Sources */,
 				14AEEBDA219EBB9D003FBE0F /* SNLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,6 +699,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -657,6 +722,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = SeanCST.SNMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

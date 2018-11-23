@@ -1,0 +1,13 @@
+//
+//  Track.m
+//  SNMusic
+//
+//  Created by 肖恩伟 on 2018/11/23.
+//  Copyright © 2018 肖恩伟. All rights reserved.
+//
+
+#import "Track.h"
+
+@implementation Track
+
+@end

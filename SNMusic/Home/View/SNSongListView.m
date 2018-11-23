@@ -10,6 +10,11 @@
 #import "SNSongListViewCell.h"
 #import "MJRefresh.h"
 #import "SNSearchSongVM.h"
+#import "SNSongInfo.h"
+#import "SNPlayingViewController.h"
+
+#import "UIView+SNGetController.h"
+
 
 #define ReuseIdentifier @"SNSongListViewCell"
 
@@ -71,6 +76,12 @@
     return UITableViewAutomaticDimension;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SNSongInfo *songInfo = self.data[indexPath.row]; // 取歌曲信息
+    
+    SNPlayingViewController *playingVC = [[SNPlayingViewController alloc] initWithSongInfo:songInfo];
+    [[self getCurrentViewController].navigationController pushViewController:playingVC animated:YES];
+}
 
 #pragma mark - UITableViewDataSource
 
