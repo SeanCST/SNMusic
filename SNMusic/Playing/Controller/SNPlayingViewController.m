@@ -9,7 +9,7 @@
 #import "SNPlayingViewController.h"
 #import "SNSongInfo.h"
 
-#import "Track.h"
+#import "Track+Provider.h"
 #import "DOUAudioStreamer.h"
 #import "DOUAudioVisualizer.h"
 
@@ -60,6 +60,8 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     [super viewDidLoad];
     
     self.title = self.songInfo.songName;
+    [self setTracks:[Track remoteTracks]];
+
 //    [self initView];
 }
 

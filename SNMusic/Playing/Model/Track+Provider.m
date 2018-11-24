@@ -44,7 +44,7 @@
         //      [track setAudioFileURL:[NSURL URLWithString:[song objectForKey:@"url"]]];
         [track setArtist:@"林俊杰"];
         [track setSongName:@"那些你很冒险的梦"];
-        [track setAudioFileURL:[NSURL URLWithString:@"http://m7.music.126.net/20181123231556/15d334893cce788d1cf53fceb7fb2514/ymusic/0fd6/4f65/43ed/a8772889f38dfcb91c04da915b301617.mp3"]];
+        [track setAudioFileURL:[NSURL URLWithString:@"https://music.163.com/song/media/outer/url?id=28953033.mp3"]];
         [allTracks addObject:track];
         //    }
         
