@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SNSongInfo;
+//@class SNSongInfo;
 
 @interface SNPlayingViewController : UIViewController
-- (instancetype)initWithSongInfo:(SNSongInfo *)songInfo;
+
+- (instancetype)initWithSongInfoArr:(NSArray *)songInfoArr CurrentIndex:(NSUInteger)currentIndex;
+
 @end

@@ -10,7 +10,8 @@
 
 @interface Track (Provider)
 
-+ (NSArray *)remoteTracks;
+//+ (NSArray *)remoteTracks;
++ (NSArray *)remoteTracksWithSongInfoArr:(NSArray *)songInfoArr;
 + (NSArray *)musicLibraryTracks;
 
 @end

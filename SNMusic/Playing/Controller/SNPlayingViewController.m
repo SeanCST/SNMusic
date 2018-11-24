@@ -40,6 +40,9 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 }
 @property (nonatomic, strong) SNSongInfo *songInfo;
 @property (nonatomic, copy) NSArray *tracks;
+@property (nonatomic, strong) NSArray *songInfoArr;
+@property (nonatomic, assign) NSUInteger currentIndex;
+
 
 //@property (nonatomic, strong) DOUAudioStreamer *streamer;
 //@property (nonatomic, strong) DOUAudioVisualizer *visualizer;
@@ -48,10 +51,12 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 @implementation SNPlayingViewController
 
-- (instancetype)initWithSongInfo:(SNSongInfo *)songInfo {
+- (instancetype)initWithSongInfoArr:(NSArray *)songInfoArr CurrentIndex:(NSUInteger)currentIndex {
     self = [super init];
     if (self) {
-        self.songInfo = songInfo;
+//        self.songInfo = songInfo;
+        self.songInfoArr = songInfoArr;
+        self.currentIndex = currentIndex;
     }
     return self;
 }
@@ -59,8 +64,8 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.songInfo.songName;
-    [self setTracks:[Track remoteTracks]];
+    self.title = @"播放";
+    [self setTracks:[Track remoteTracksWithSongInfoArr:self.songInfoArr]];
 
 //    [self initView];
 }

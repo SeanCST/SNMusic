@@ -77,9 +77,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SNSongInfo *songInfo = self.data[indexPath.row]; // 取歌曲信息
+//    SNSongInfo *songInfo = self.data[indexPath.row]; // 取歌曲信息
     
-    SNPlayingViewController *playingVC = [[SNPlayingViewController alloc] initWithSongInfo:songInfo];
+    SNPlayingViewController *playingVC = [[SNPlayingViewController alloc] initWithSongInfoArr:self.data CurrentIndex:indexPath.row];
     [[self getCurrentViewController].navigationController pushViewController:playingVC animated:YES];
 }
 
