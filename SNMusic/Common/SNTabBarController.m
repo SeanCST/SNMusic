@@ -9,6 +9,7 @@
 #import "SNTabBarController.h"
 #import "SNNavigationController.h"
 #import "SNHomeViewController.h"
+#import "SNMeViewController.h"
 
 @interface SNTabBarController ()
 
@@ -28,7 +29,7 @@
     UIViewController *localVc = [[UIViewController alloc] init];
     [self addOneChildVc:localVc title:@"本地" imageName:@"tab_local" selectedImageName:@"tab_local_selected"];
     
-    UIViewController *meVc = [[UIViewController alloc] init];
+    UIViewController *meVc = [[SNMeViewController alloc] init];
     [self addOneChildVc:meVc title:@"我" imageName:@"tab_me" selectedImageName:@"tab_me_selected"];
 
 }
