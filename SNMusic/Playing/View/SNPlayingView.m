@@ -8,6 +8,10 @@
 
 #import "SNPlayingView.h"
 
+@interface SNPlayingView ()
+
+@end
+
 @implementation SNPlayingView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -20,6 +24,15 @@
 }
 
 - (void)initView {
+    // 歌名 歌手
+    UILabel *titleLabel = [UILabel new];
+    [self addSubview:titleLabel];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.bottom.equalTo(self.mas_top).offset(90);
+    }];
+    self.titleLabel = titleLabel;
+    
     // 封面
     UIImageView *coverImageView = [UIImageView new];
     coverImageView.backgroundColor = [UIColor redColor];
@@ -29,7 +42,9 @@
         make.centerX.equalTo(self.mas_centerX);
         make.top.equalTo(self).offset(120);
     }];
+    self.coverImageView = coverImageView;
     
+
     // 底部播放控制栏
     UIView *controlView = [UIView new];
     controlView.backgroundColor = [UIColor greenColor];
@@ -49,6 +64,7 @@
         make.centerX.equalTo(controlView);
         make.bottom.equalTo(controlView).offset(-20);
     }];
+    self.playPauseBtn = playPauseBtn;
     
     // 上一首
     UIButton *previousBtn = [UIButton new];
@@ -58,6 +74,7 @@
         make.right.equalTo(playPauseBtn.mas_left).offset(-20);
         make.bottom.equalTo(playPauseBtn);
     }];
+    self.previousBtn = previousBtn;
     
     // 下一首
     UIButton *nextBtn = [UIButton new];
@@ -67,6 +84,7 @@
         make.left.equalTo(playPauseBtn.mas_right).offset(20);
         make.bottom.equalTo(playPauseBtn);
     }];
+    self.nextBtn = nextBtn;
     
     // 播放模式按钮
     UIButton *modeBtn = [UIButton new];
@@ -76,6 +94,7 @@
         make.right.equalTo(previousBtn.mas_left).offset(-20);
         make.bottom.equalTo(playPauseBtn);
     }];
+    self.modeBtn = modeBtn;
     
     // 歌曲列表按钮
     UIButton *listBtn = [UIButton new];
@@ -85,6 +104,7 @@
         make.left.equalTo(nextBtn.mas_right).offset(20);
         make.bottom.equalTo(playPauseBtn);
     }];
+    self.listBtn = listBtn;
     
     // 当前播放时间进度标签
     UILabel *currentTimeLabel = [UILabel new];
@@ -94,6 +114,7 @@
         make.left.equalTo(controlView).offset(20);
         make.bottom.equalTo(playPauseBtn.mas_top).offset(-20);
     }];
+    self.currentTimeLabel = currentTimeLabel;
     
     // 总时长标签
     UILabel *durationLabel = [UILabel new];
@@ -103,6 +124,7 @@
         make.right.equalTo(controlView).offset(-20);
         make.bottom.equalTo(playPauseBtn.mas_top).offset(-20);
     }];
+    self.durationLabel = durationLabel;
     
     // 播放进度条
     UISlider *progressSlider = [UISlider new];
@@ -112,6 +134,7 @@
         make.right.equalTo(durationLabel.mas_left).offset(-20);
         make.centerY.equalTo(currentTimeLabel);
     }];
+    self.progressSlider = progressSlider;
 }
 
 @end
