@@ -21,5 +21,7 @@
 @property (nonatomic, strong) UILabel *durationLabel;
 @property (nonatomic, strong) UISlider *progressSlider;
 
+@property (nonatomic, strong) UIButton *downloadBtn;
+
 
 @end

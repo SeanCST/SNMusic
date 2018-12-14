@@ -55,6 +55,11 @@
         _tableView.showsVerticalScrollIndicator = YES;
         _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
         _tableView.mj_footer.hidden = YES;
+        
+        // 添加手势处理键盘
+        UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+        gestureRecognizer.cancelsTouchesInView = NO;
+        [_tableView addGestureRecognizer:gestureRecognizer];
     }
     
     return _tableView;
@@ -77,10 +82,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    SNSongInfo *songInfo = self.data[indexPath.row]; // 取歌曲信息
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    self.getCurrentViewController.hidesBottomBarWhenPushed = YES; // push 之后隐藏底部 tabbar
+
     SNPlayingViewController *playingVC = [[SNPlayingViewController alloc] initWithSongInfoArr:self.data CurrentIndex:indexPath.row];
     [[self getCurrentViewController].navigationController pushViewController:playingVC animated:YES];
+    
+    self.getCurrentViewController.hidesBottomBarWhenPushed = NO; // 加这一句防止放回的时候也不显示 tabbar 了
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self hideKeyboard];
 }
 
 #pragma mark - UITableViewDataSource
@@ -99,6 +112,14 @@
     
     return cell;
 }
+
+/**
+ 隐藏键盘
+ */
+- (void) hideKeyboard {
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+}
+
 
 - (NSArray *)data {
     if (!_data) {

@@ -20,17 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupChildVc];
+    
 }
 
 - (void)setupChildVc {
     UIViewController *homeVc = [[SNHomeViewController alloc] init];
     [self addOneChildVc:homeVc title:@"首页" imageName:@"tab_music" selectedImageName:@"tab_music_selected"];
     
-    UIViewController *localVc = [[UIViewController alloc] init];
+//    UIViewController *localVc = [[UIViewController alloc] init];
+    UIViewController *localVc = [[SNHomeViewController alloc] init];
     [self addOneChildVc:localVc title:@"本地" imageName:@"tab_local" selectedImageName:@"tab_local_selected"];
     
-    UIViewController *meVc = [[SNMeViewController alloc] init];
-    [self addOneChildVc:meVc title:@"我" imageName:@"tab_me" selectedImageName:@"tab_me_selected"];
+//    UIViewController *meVc = [[SNMeViewController alloc] init];
+//    [self addOneChildVc:meVc title:@"我" imageName:@"tab_me" selectedImageName:@"tab_me_selected"];
 
 }
 

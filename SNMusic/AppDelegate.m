@@ -19,23 +19,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setupRootViewController];
     
-    // 查看登录状态，未登录则显示登陆界面，已登录则直接显示首页
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL LoginedAccount = [defaults boolForKey:@"LoginedAccount"];
-    LoginedAccount = YES;
-    // 设置根控制器
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    if (LoginedAccount) { // 未登录
-        self.window.rootViewController = [[SNTabBarController alloc] init];
-    } else { // 已登录
-        self.window.rootViewController = [[SNLoginViewController alloc] init];
-    }
-    [self.window makeKeyAndVisible];
+    // 注册监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupRootViewController) name:@"kLoginSuccessChangeVC" object:nil];
     
     return YES;
 }
 
+- (void)setupRootViewController {
+    // 查看登录状态，未登录则显示登陆界面，已登录则直接显示首页
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL LoginedAccount = [defaults boolForKey:@"LoginedAccount"];
+    //    LoginedAccount = YES;
+    // 设置根控制器
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    if (LoginedAccount) { // 已登录
+        self.window.rootViewController = [[SNTabBarController alloc] init];
+    } else { // 未登录
+        self.window.rootViewController = [[SNLoginViewController alloc] init];
+    }
+    [self.window makeKeyAndVisible];
+}
+
+- (void)dealloc {
+    // 清除监听通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

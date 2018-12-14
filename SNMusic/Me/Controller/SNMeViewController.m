@@ -8,6 +8,7 @@
 
 #import "SNMeViewController.h"
 #import "SNPlayingView.h"
+//#import "HMChosenCountryView.h"
 
 @interface SNMeViewController ()
 
@@ -18,8 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    SNPlayingView *playingView = [[SNPlayingView alloc] initWithFrame:CGRectMake(0, GetRectNavAndStatusHight, kScreenWidth, kScreenHeight - GetRectNavAndStatusHight - TAB_BAR_HEIGHT)];
-    [self.view addSubview:playingView];
+
+//    HMChosenCountryView *view = [HMChosenCountryView chosenCountryViewWithTitle:@"中国啊啊啊啊"];
+//    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

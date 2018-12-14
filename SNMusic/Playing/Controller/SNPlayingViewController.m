@@ -14,50 +14,33 @@
 #import "DOUAudioVisualizer.h"
 
 #import "SNPlayingView.h"
-
+#import "SNDownloader.h"
 #import <UIImageView+WebCache.h>
 
 static void *kStatusKVOKey = &kStatusKVOKey;
 static void *kDurationKVOKey = &kDurationKVOKey;
 static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
+// 播放模式 枚举
+typedef enum : NSUInteger {
+    SNPlayingModeOrder, // 顺序播放
+    SNPlayingModeSingle, // 单曲循环
+    SNPlayingModeRandom, // 随机播放
+} SNPlayingMode;
+
 @interface SNPlayingViewController ()
-//{
-//@private
-//    UILabel *_titleLabel;
-//    UILabel *_statusLabel;
-//    UILabel *_miscLabel;
-//
-//    UIButton *_buttonPlayPause;
-//    UIButton *_buttonNext;
-//    UIButton *_buttonStop;
-//
-//    UISlider *_progressSlider;
-//
-//    UILabel *_volumeLabel;
-//    UISlider *_volumeSlider;
-//
-//    NSUInteger _currentTrackIndex;
-//    NSTimer *_timer;
-//
-//    DOUAudioStreamer *_streamer;
-//    DOUAudioVisualizer *_audioVisualizer;
-//}
-//@property (nonatomic, strong) SNSongInfo *songInfo;
 
 @property (nonatomic, strong) SNPlayingView *playingView;
-
 
 @property (nonatomic, copy) NSArray *tracks;
 @property (nonatomic, strong) NSArray *songInfoArr;
 @property (nonatomic, assign) NSInteger currentTrackIndex;
 
 @property (nonatomic, strong) NSTimer *timer;
-
-
-
 @property (nonatomic, strong) DOUAudioStreamer *streamer;
 //@property (nonatomic, strong) DOUAudioVisualizer *visualizer;
+
+@property (nonatomic, assign) SNPlayingMode playingMode;
 
 @end
 
@@ -66,98 +49,38 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 - (instancetype)initWithSongInfoArr:(NSArray *)songInfoArr CurrentIndex:(NSUInteger)currentIndex {
     self = [super init];
     if (self) {
-//        self.songInfo = songInfo;
         self.songInfoArr = songInfoArr;
         self.currentTrackIndex = currentIndex;
         [self setTracks:[Track remoteTracksWithSongInfoArr:self.songInfoArr]];
+        
+        self.playingMode = SNPlayingModeOrder; // 默认顺序播放
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"播放";
 
-    SNPlayingView *playingView = [[SNPlayingView alloc] initWithFrame:CGRectMake(0, GetRectNavAndStatusHight, kScreenWidth, kScreenHeight - GetRectNavAndStatusHight - TAB_BAR_HEIGHT)];
+    SNPlayingView *playingView = [[SNPlayingView alloc] initWithFrame:CGRectMake(0, GetRectNavAndStatusHight, kScreenWidth, kScreenHeight - GetRectNavAndStatusHight)];
     [self.view addSubview:playingView];
     self.playingView = playingView;
     
-    [self.playingView.progressSlider addTarget:self action:@selector(_actionSliderProgress:) forControlEvents:UIControlEventValueChanged];
-    [self.playingView.playPauseBtn addTarget:self action:@selector(_actionPlayPause:) forControlEvents:UIControlEventTouchUpInside];
-    [self.playingView.nextBtn addTarget:self action:@selector(_actionNext:) forControlEvents:UIControlEventTouchUpInside];
-    [self.playingView.previousBtn addTarget:self action:@selector(_actionPrevious:) forControlEvents:UIControlEventTouchUpInside];
+    [self.playingView.progressSlider addTarget:self action:@selector(actionSliderProgress:) forControlEvents:UIControlEventValueChanged];
+    [self.playingView.playPauseBtn addTarget:self action:@selector(actionPlayPause:) forControlEvents:UIControlEventTouchUpInside];
+    [self.playingView.nextBtn addTarget:self action:@selector(actionNext:) forControlEvents:UIControlEventTouchUpInside];
+    [self.playingView.previousBtn addTarget:self action:@selector(actionPrevious:) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [self.playingView.downloadBtn addTarget:self action:@selector(actionDownload:) forControlEvents:UIControlEventTouchUpInside];
+    [self.playingView.modeBtn addTarget:self action:@selector(changePlayingMode) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-//- (void)loadView
-//{
-//    UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    [view setBackgroundColor:[UIColor whiteColor]];
-//
-//    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 64.0, CGRectGetWidth([view bounds]), 30.0)];
-//    [_titleLabel setFont:[UIFont systemFontOfSize:20.0]];
-//    [_titleLabel setTextColor:[UIColor blackColor]];
-//    [_titleLabel setTextAlignment:NSTextAlignmentCenter];
-//    [_titleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
-//    [view addSubview:_titleLabel];
-//
-//    _statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY([_titleLabel frame]) + 10.0, CGRectGetWidth([view bounds]), 30.0)];
-//    [_statusLabel setFont:[UIFont systemFontOfSize:16.0]];
-//    [_statusLabel setTextColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
-//    [_statusLabel setTextAlignment:NSTextAlignmentCenter];
-//    [_statusLabel setLineBreakMode:NSLineBreakByTruncatingTail];
-//    [view addSubview:_statusLabel];
-//
-//    _miscLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY([_statusLabel frame]) + 10.0, CGRectGetWidth([view bounds]), 20.0)];
-//    [_miscLabel setFont:[UIFont systemFontOfSize:10.0]];
-//    [_miscLabel setTextColor:[UIColor colorWithWhite:0.5 alpha:1.0]];
-//    [_miscLabel setTextAlignment:NSTextAlignmentCenter];
-//    [_miscLabel setLineBreakMode:NSLineBreakByTruncatingTail];
-//    [view addSubview:_miscLabel];
-//
-//    _buttonPlayPause = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [_buttonPlayPause setFrame:CGRectMake(80.0, CGRectGetMaxY([_miscLabel frame]) + 20.0, 60.0, 20.0)];
-//    [_buttonPlayPause setTitle:@"Play" forState:UIControlStateNormal];
-//    [_buttonPlayPause addTarget:self action:@selector(_actionPlayPause:) forControlEvents:UIControlEventTouchDown];
-//    [view addSubview:_buttonPlayPause];
-//
-//    _buttonNext = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [_buttonNext setFrame:CGRectMake(CGRectGetWidth([view bounds]) - 80.0 - 60.0, CGRectGetMinY([_buttonPlayPause frame]), 60.0, 20.0)];
-//    [_buttonNext setTitle:@"Next" forState:UIControlStateNormal];
-//    [_buttonNext addTarget:self action:@selector(_actionNext:) forControlEvents:UIControlEventTouchDown];
-//    [view addSubview:_buttonNext];
-//
-//    _buttonStop = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [_buttonStop setFrame:CGRectMake(round((CGRectGetWidth([view bounds]) - 60.0) / 2.0), CGRectGetMaxY([_buttonNext frame]) + 20.0, 60.0, 20.0)];
-//    [_buttonStop setTitle:@"Stop" forState:UIControlStateNormal];
-//    [_buttonStop addTarget:self action:@selector(_actionStop:) forControlEvents:UIControlEventTouchDown];
-//    [view addSubview:_buttonStop];
-//
-//    _progressSlider = [[UISlider alloc] initWithFrame:CGRectMake(20.0, CGRectGetMaxY([_buttonStop frame]) + 20.0, CGRectGetWidth([view bounds]) - 20.0 * 2.0, 40.0)];
-//    [_progressSlider addTarget:self action:@selector(_actionSliderProgress:) forControlEvents:UIControlEventValueChanged];
-//    [view addSubview:_progressSlider];
-//
-//    _volumeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0, CGRectGetMaxY([_progressSlider frame]) + 20.0, 80.0, 40.0)];
-//    [_volumeLabel setText:@"Volume:"];
-//    [view addSubview:_volumeLabel];
-//
-//    _volumeSlider = [[UISlider alloc] initWithFrame:CGRectMake(CGRectGetMaxX([_volumeLabel frame]) + 10.0, CGRectGetMinY([_volumeLabel frame]), CGRectGetWidth([view bounds]) - CGRectGetMaxX([_volumeLabel frame]) - 10.0 - 20.0, 40.0)];
-//    [_volumeSlider addTarget:self action:@selector(_actionSliderVolume:) forControlEvents:UIControlEventValueChanged];
-//    [view addSubview:_volumeSlider];
-//
-//    _audioVisualizer = [[DOUAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY([_volumeSlider frame]), CGRectGetWidth([view bounds]), CGRectGetHeight([view bounds]) - CGRectGetMaxY([_volumeSlider frame]))];
-//    [_audioVisualizer setBackgroundColor:[UIColor colorWithRed:239.0 / 255.0 green:244.0 / 255.0 blue:240.0 / 255.0 alpha:1.0]];
-//    [view addSubview:_audioVisualizer];
-//
-//    [self setView:view];
-//}
 
 #pragma mark - Playing Handler
 - (void)_cancelStreamer
@@ -250,7 +173,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
             
         case DOUAudioStreamerFinished:
 //            [_statusLabel setText:@"finished"];
-            [self _actionNext:nil];
+            [self actionNext:nil];
             break;
             
         case DOUAudioStreamerBuffering:
@@ -322,7 +245,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 }
 
 #pragma mark - Button Clicked
-- (void)_actionPlayPause:(id)sender
+- (void)actionPlayPause:(id)sender
 {
     if ([_streamer status] == DOUAudioStreamerPaused ||
         [_streamer status] == DOUAudioStreamerIdle) {
@@ -331,37 +254,83 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     else {
         [_streamer pause];
     }
+    // 更改选中状态
+    self.playingView.playPauseBtn.selected = !self.playingView.playPauseBtn.selected;
 }
 
-- (void)_actionNext:(id)sender
+- (void)actionNext:(id)sender
 {
-    if (++_currentTrackIndex >= [_tracks count]) {
-        _currentTrackIndex = 0;
+    if (self.playingMode == SNPlayingModeOrder) { // 顺序
+        if (++_currentTrackIndex >= [_tracks count]) {
+            _currentTrackIndex = 0;
+        }
+    } else if (self.playingMode == SNPlayingModeSingle) { // 单曲循环，不需要作调整
+        
+    } else { // 随机播放
+        NSUInteger count = [_tracks count];
+        _currentTrackIndex += arc4random_uniform((uint32_t)count);
+        if (_currentTrackIndex >= count) {
+            _currentTrackIndex -= count;
+        }
     }
     
     [self _resetStreamer];
 }
 
-- (void)_actionPrevious:(id)sender
+- (void)actionPrevious:(id)sender
 {
-    if (--_currentTrackIndex < 0) {
-        _currentTrackIndex = [_tracks count] - 1;
+    if (self.playingMode == SNPlayingModeOrder) { // 顺序
+        if (--_currentTrackIndex < 0) {
+            _currentTrackIndex = [_tracks count] - 1;
+        }
+    } else if (self.playingMode == SNPlayingModeSingle) { // 单曲循环，不需要作调整
+        
+    } else { // 随机播放
+        NSUInteger count = [_tracks count];
+        _currentTrackIndex += arc4random_uniform((uint32_t)count);
+        if (_currentTrackIndex >= count) {
+            _currentTrackIndex -= count;
+        }
     }
     
     [self _resetStreamer];
 }
 
-- (void)_actionStop:(id)sender
+- (void)actionStop:(id)sender
 {
     [_streamer stop];
 }
 
-- (void)_actionSliderProgress:(id)sender
+- (void)actionSliderProgress:(id)sender
 {
     [_streamer setCurrentTime:[_streamer duration] * [self.playingView.progressSlider value]];
 }
 
-# pragma mark - Show Cover
+//#pragma mark - 下载
+//- (void)actionDownload:(id)sender {
+//    SNSongInfo *info = self.songInfoArr[self.currentTrackIndex];
+//
+//    [[SNDownloader shareClient] downloadWithSongInfo:info];
+//}
+
+
+/**
+ 改变播放模式
+ */
+- (void)changePlayingMode {
+    if (self.playingMode == SNPlayingModeOrder) {
+        [self.playingView.modeBtn setImage:[UIImage imageNamed:@"cm2_play_btn_one"] forState:UIControlStateNormal];
+        self.playingMode = SNPlayingModeSingle;
+    } else if (self.playingMode == SNPlayingModeSingle) {
+        [self.playingView.modeBtn setImage:[UIImage imageNamed:@"cm2_play_btn_shuffle"] forState:UIControlStateNormal];
+        self.playingMode = SNPlayingModeRandom;
+    } else {
+        [self.playingView.modeBtn setImage:[UIImage imageNamed:@"cm2_play_btn_loop"] forState:UIControlStateNormal];
+        self.playingMode = SNPlayingModeOrder;
+    }
+}
+
+#pragma mark - Show Cover
 - (void)setCoverWithIndex:(NSInteger)index {
     SNSongInfo *songInfo = self.songInfoArr[index];
     
@@ -394,6 +363,5 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 //{
 //    [DOUAudioStreamer setVolume:[_volumeSlider value]];
 //}
-
 
 @end

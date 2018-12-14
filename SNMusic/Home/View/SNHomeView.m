@@ -27,7 +27,6 @@
 }
 
 - (void)initView {
-    
     // 搜索框
     UISearchBar *searchBar = [[UISearchBar alloc] init];
     self.searchBar = searchBar;

@@ -21,6 +21,8 @@
 		144878EC219E943B000DE762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878EB219E943B000DE762 /* main.m */; };
 		144878F6219E943B000DE762 /* SNMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 144878F5219E943B000DE762 /* SNMusicTests.m */; };
 		14487901219E943B000DE762 /* SNMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14487900219E943B000DE762 /* SNMusicUITests.m */; };
+		147BADB621AFD89E00DB9048 /* SNDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 147BADB521AFD89E00DB9048 /* SNDownloader.m */; };
+		147BADB921AFD90300DB9048 /* SNDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 147BADB821AFD90300DB9048 /* SNDownloadModel.m */; };
 		14AEEBDA219EBB9D003FBE0F /* SNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AEEBD9219EBB9D003FBE0F /* SNLoginViewController.m */; };
 		14C67BCE219EF95000E484F2 /* SNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BCD219EF95000E484F2 /* SNNavigationController.m */; };
 		14C67BD1219EFBD700E484F2 /* SNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67BD0219EFBD700E484F2 /* SNTabBarController.m */; };
@@ -80,6 +82,10 @@
 		144878FC219E943B000DE762 /* SNMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14487900219E943B000DE762 /* SNMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMusicUITests.m; sourceTree = "<group>"; };
 		14487902219E943B000DE762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147BADB421AFD89E00DB9048 /* SNDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNDownloader.h; sourceTree = "<group>"; };
+		147BADB521AFD89E00DB9048 /* SNDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNDownloader.m; sourceTree = "<group>"; };
+		147BADB721AFD90300DB9048 /* SNDownloadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNDownloadModel.h; sourceTree = "<group>"; };
+		147BADB821AFD90300DB9048 /* SNDownloadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNDownloadModel.m; sourceTree = "<group>"; };
 		14AEEBD8219EBB9D003FBE0F /* SNLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNLoginViewController.h; sourceTree = "<group>"; };
 		14AEEBD9219EBB9D003FBE0F /* SNLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNLoginViewController.m; sourceTree = "<group>"; };
 		14AEEBDC219EC2B4003FBE0F /* SNPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNPrefixHeader.pch; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 		144878DB219E9439000DE762 /* SNMusic */ = {
 			isa = PBXGroup;
 			children = (
+				14F27E8821AE86F4007288AC /* Download */,
 				140C40B321A928E5000AA2BB /* Me */,
 				141AB09E21A7F460004F6464 /* Playing */,
 				14C67BD2219FE39B00E484F2 /* Home */,
@@ -339,6 +346,17 @@
 				14C67BEA21A00AF600E484F2 /* UIView+SNExtension.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		14F27E8821AE86F4007288AC /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				147BADB421AFD89E00DB9048 /* SNDownloader.h */,
+				147BADB521AFD89E00DB9048 /* SNDownloader.m */,
+				147BADB721AFD90300DB9048 /* SNDownloadModel.h */,
+				147BADB821AFD90300DB9048 /* SNDownloadModel.m */,
+			);
+			path = Download;
 			sourceTree = "<group>";
 		};
 		5A613F5D618FB4AD63C0B149 /* Frameworks */ = {
@@ -539,9 +557,11 @@
 				140C40B721A9290E000AA2BB /* SNMeViewController.m in Sources */,
 				14C67BE821A0079C00E484F2 /* SNSongListView.m in Sources */,
 				14C67BF221A0345800E484F2 /* SNHomeView.m in Sources */,
+				147BADB921AFD90300DB9048 /* SNDownloadModel.m in Sources */,
 				141AB0AB21A82C62004F6464 /* Track.m in Sources */,
 				144878E1219E9439000DE762 /* ViewController.m in Sources */,
 				144878EC219E943B000DE762 /* main.m in Sources */,
+				147BADB621AFD89E00DB9048 /* SNDownloader.m in Sources */,
 				14C67BEC21A00AF600E484F2 /* UIView+SNExtension.m in Sources */,
 				14C67BE2219FFE9900E484F2 /* SNSearchSongVM.m in Sources */,
 				144878DE219E9439000DE762 /* AppDelegate.m in Sources */,
