@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		140C40B221A92367000AA2BB /* SNPlayingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C40B121A92367000AA2BB /* SNPlayingView.m */; };
-		140C40B721A9290E000AA2BB /* SNMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C40B621A9290E000AA2BB /* SNMeViewController.m */; };
 		141AB0A121A7F48B004F6464 /* SNPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0A021A7F48B004F6464 /* SNPlayingViewController.m */; };
 		141AB0A521A7F687004F6464 /* UIView+SNGetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0A421A7F687004F6464 /* UIView+SNGetController.m */; };
 		141AB0AB21A82C62004F6464 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 141AB0AA21A82C62004F6464 /* Track.m */; };
@@ -56,8 +55,6 @@
 /* Begin PBXFileReference section */
 		140C40B021A92367000AA2BB /* SNPlayingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNPlayingView.h; sourceTree = "<group>"; };
 		140C40B121A92367000AA2BB /* SNPlayingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNPlayingView.m; sourceTree = "<group>"; };
-		140C40B521A9290E000AA2BB /* SNMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNMeViewController.h; sourceTree = "<group>"; };
-		140C40B621A9290E000AA2BB /* SNMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMeViewController.m; sourceTree = "<group>"; };
 		141AB09F21A7F48B004F6464 /* SNPlayingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNPlayingViewController.h; sourceTree = "<group>"; };
 		141AB0A021A7F48B004F6464 /* SNPlayingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNPlayingViewController.m; sourceTree = "<group>"; };
 		141AB0A321A7F687004F6464 /* UIView+SNGetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SNGetController.h"; sourceTree = "<group>"; };
@@ -138,23 +135,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		140C40B321A928E5000AA2BB /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				140C40B421A928F0000AA2BB /* Controller */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		140C40B421A928F0000AA2BB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				140C40B521A9290E000AA2BB /* SNMeViewController.h */,
-				140C40B621A9290E000AA2BB /* SNMeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		141AB09E21A7F460004F6464 /* Playing */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				14F27E8821AE86F4007288AC /* Download */,
-				140C40B321A928E5000AA2BB /* Me */,
 				141AB09E21A7F460004F6464 /* Playing */,
 				14C67BD2219FE39B00E484F2 /* Home */,
 				14C67BCB219EE66800E484F2 /* Common */,
@@ -554,7 +533,6 @@
 				141AB0A521A7F687004F6464 /* UIView+SNGetController.m in Sources */,
 				14C67BDE219FF2B300E484F2 /* SNSongInfo.m in Sources */,
 				140C40B221A92367000AA2BB /* SNPlayingView.m in Sources */,
-				140C40B721A9290E000AA2BB /* SNMeViewController.m in Sources */,
 				14C67BE821A0079C00E484F2 /* SNSongListView.m in Sources */,
 				14C67BF221A0345800E484F2 /* SNHomeView.m in Sources */,
 				147BADB921AFD90300DB9048 /* SNDownloadModel.m in Sources */,

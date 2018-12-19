@@ -9,6 +9,9 @@
 #import "SNLoginViewController.h"
 @interface SNLoginViewController ()
 
+@property (nonatomic, strong) UITextField *phoneField;
+@property (nonatomic, strong) UITextField *passwordField;
+
 @end
 
 @implementation SNLoginViewController
@@ -45,6 +48,7 @@
         make.height.equalTo(@0.5);
     }];
     
+    self.phoneField = phoneField;
     
     // 填写密码
     UITextField *passwordField = [[UITextField alloc] init];
@@ -68,7 +72,7 @@
         make.height.equalTo(phoneFieldBtmLine);
     }];
     
-    
+    self.passwordField = passwordField;
     
     // 登陆按钮
     UIButton *loginBtn = [[UIButton alloc] init];
@@ -92,8 +96,8 @@
  */
 - (void)loginBtnClicked {
     NSString *URLString = [NSString stringWithFormat:@"%@/login/cellphone", BaseUrl];
-    NSDictionary *params = @{@"phone": @"15505920563",
-                             @"password": @"1995sean1124"
+    NSDictionary *params = @{@"phone": self.phoneField.text,
+                             @"password": self.passwordField.text
                              };
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

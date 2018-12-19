@@ -275,6 +275,8 @@ typedef enum : NSUInteger {
     }
     
     [self _resetStreamer];
+    
+    self.playingView.playPauseBtn.selected = NO;
 }
 
 - (void)actionPrevious:(id)sender
@@ -294,6 +296,7 @@ typedef enum : NSUInteger {
     }
     
     [self _resetStreamer];
+    self.playingView.playPauseBtn.selected = NO;
 }
 
 - (void)actionStop:(id)sender
